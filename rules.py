@@ -372,7 +372,7 @@ def rollDice():
 #    rospy.sleep(2.0)
     #rospy.spin()
     
-def publishDice(diceVal):
+#def publishDice(diceVal):
 #    diceMovePub = rospy.Publisher('diceRoll', Int16, queue_size=10)
 #    diceMovePub.publish(diceVal)
 #    rospy.sleep(2.0)
