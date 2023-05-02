@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import rospy
 from std_msgs.msg import (Int16, String, Int16MultiArray)
 
 #import rospy
@@ -283,9 +282,9 @@ def playerTurn():
     # Apply rules of space
 
     # Initialization
-    pub = rospy.Publisher('TurnInfo', String, queue_size = 10) # Create publisher for topic TurnInfo
+#    pub = rospy.Publisher('TurnInfo', String, queue_size = 10) # Create publisher for topic TurnInfo
     
-    rate = rospy.Rate(10)               # Send messages every 10 hz
+#    rate = rospy.Rate(10)               # Send messages every 10 hz
     board = BoardSpaces()
     properties = TitleDeedCards()
 
@@ -361,7 +360,7 @@ def diceTotal(values):
 
 # Generate two random values between 1 and 6, representing a dice roll
 def rollDice():
-    diceMovePub = rospy.Publisher('diceRoll', Int16, queue_size=10)
+#    diceMovePub = rospy.Publisher('diceRoll', Int16, queue_size=10)
     values = []
     total = 0
     """values.append(random.randrange(1,6))   
@@ -369,14 +368,14 @@ def rollDice():
     return tuple(values)"""
     
     msg = 0
-    diceMovePub.publish(msg)
-    rospy.sleep(2.0)
+#    diceMovePub.publish(msg)
+#    rospy.sleep(2.0)
     #rospy.spin()
     
 def publishDice(diceVal):
-    diceMovePub = rospy.Publisher('diceRoll', Int16, queue_size=10)
-    diceMovePub.publish(diceVal)
-    rospy.sleep(2.0)
+#    diceMovePub = rospy.Publisher('diceRoll', Int16, queue_size=10)
+#    diceMovePub.publish(diceVal)
+#    rospy.sleep(2.0)
 
 # Given a tuple containing dice roll values, verify that:
 #   There are exactly two values
@@ -426,7 +425,7 @@ def evaluateDice(diceRoll):
 
 if __name__ == '__main__':
     #try:
-    rospy.init_node('playerTurn')       # Create ROS Node for pubsub interfacing
+#    rospy.init_node('playerTurn')       # Create ROS Node for pubsub interfacing
     playerTurn()
     #except rospy.ROSInterruptException:
         #print("Error while instantiating playerTurn in rules.py!\n")"""
