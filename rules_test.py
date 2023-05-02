@@ -144,15 +144,15 @@ class TestMain(unittest.TestCase):
             diceTotal = int(rules.diceTotal(diceRoll))
             boardSpaces = rules.BoardSpaces()
             
-            if diceTotal is 2:
+            if diceTotal == 2:
                 self.assertEqual(boardSpaces.parseSpace(diceTotal), "Draw card: community chest")
-            elif diceTotal is 4:
+            elif diceTotal == 4:
                 self.assertEqual(boardSpaces.parseSpace(diceTotal), "Pay 200")
-            elif diceTotal is 7:
+            elif diceTotal == 7:
                 self.assertEqual(boardSpaces.parseSpace(diceTotal), "Draw card: chance")
-            elif diceTotal is 10:
+            elif diceTotal == 10:
                 self.assertEqual(boardSpaces.parseSpace(diceTotal), "Do nothing")
-            elif diceTotal is 1 or 3 or 5 or 6 or 8 or 9 or 11 or 12:
+            elif diceTotal == 1 or 3 or 5 or 6 or 8 or 9 or 11 or 12:
                 self.assertEqual(boardSpaces.parseSpace(diceTotal), "Options: own, buy, auction, pay rent")
         else:
             raise ValueError("Illegal dice roll")
