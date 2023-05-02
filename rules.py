@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from std_msgs.msg import (Int16, String, Int16MultiArray)
+#from std_msgs.msg import (Int16, String, Int16MultiArray)
 
 #import rospy
 import sys
