@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: sudo chmod 777 setup.sh
       - run: ./setup.sh
