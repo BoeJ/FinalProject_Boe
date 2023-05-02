@@ -22,15 +22,15 @@ class TestMain(unittest.TestCase):
         self.assertFalse(rules.evaluateDice(diceRoll3))
         self.assertFalse(rules.evaluateDice(diceRoll4))
       
-#    def test_parseSpace(self):
-#        boardSpaces = rules.BoardSpaces()
-#        space1 = 1
-#        space2 = 2
-#        space3 = 41
+    def test_parseSpace(self):
+        boardSpaces = rules.BoardSpaces()
+        space1 = 1
+        space2 = 2
+        space3 = 41
 
-#        self.assertEqual(boardSpaces.parseSpace(space1), "Options: own, buy, auction, pay rent")
-#        self.assertEqual(boardSpaces.parseSpace(space2), "Draw card: community chest")
-#        self.assertEqual(boardSpaces.parseSpace(space3), "Error: invalid board space!")
+        self.assertEqual(boardSpaces.parseSpace(space1), "Options: own, buy, auction, pay rent")
+        self.assertEqual(boardSpaces.parseSpace(space2), "Draw card: community chest")
+        self.assertEqual(boardSpaces.parseSpace(space3), "Error: invalid board space!")
         
     def test_actionRules(self):
         boardSpaces = rules.BoardSpaces()
